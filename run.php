@@ -15,25 +15,29 @@ $server = new Server(
             '824797624d5c516717cc65fef1de1ae937681ceb/currencies.json';
         $client = new Client();
 
-        $response = $client->get($url);
-        $json     = json_decode($response->getBody()->getContents(), true, JSON_THROW_ON_ERROR);
+        $response = $client->getAsync($url);
 
-        return new Response(
-            200,
-            array(
-                'Content-Type' => 'application/json',
-            ),
-            json_encode(
-                [
-                    'success' => true,
-                    'data'    => $json['rates'],
-                ]
-            )
-        );
+        return $response->then(function ($res) {
+            $json     = json_decode($res->getBody()->getContents(), true, JSON_THROW_ON_ERROR);
+
+            return new Response(
+                200,
+                array(
+                    'Content-Type' => 'application/json',
+                ),
+                json_encode(
+                    [
+                        'success' => true,
+                        'data'    => $json['rates'],
+                    ]
+                )
+            );
+        });
+
     }
 );
 
-$socket = new React\Socket\Server(8080, $loop);
+$socket = new React\Socket\Server('0.0.0.0:8080', $loop);
 $server->listen($socket);
 
 $loop->run();
