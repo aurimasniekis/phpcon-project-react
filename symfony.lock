@@ -1,4 +1,7 @@
 {
+    "apisearch-io/symfony-async-http-kernel": {
+        "version": "dev-master"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -90,6 +93,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "evenement/evenement": {
+        "version": "v3.0.1"
+    },
     "guzzlehttp/guzzle": {
         "version": "6.4.1"
     },
@@ -111,6 +117,12 @@
     "ocramius/proxy-manager": {
         "version": "2.5.0"
     },
+    "php-pm/httpkernel-adapter": {
+        "version": "dev-master"
+    },
+    "php-pm/php-pm": {
+        "version": "dev-master"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -123,11 +135,47 @@
     "psr/http-message": {
         "version": "1.0.1"
     },
+    "psr/http-server-handler": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.2"
     },
     "ralouphie/getallheaders": {
         "version": "3.0.3"
+    },
+    "react/cache": {
+        "version": "v1.0.0"
+    },
+    "react/child-process": {
+        "version": "v0.6.1"
+    },
+    "react/dns": {
+        "version": "v1.2.0"
+    },
+    "react/event-loop": {
+        "version": "v1.1.0"
+    },
+    "react/http": {
+        "version": "v0.8.5"
+    },
+    "react/promise": {
+        "version": "v2.7.1"
+    },
+    "react/promise-stream": {
+        "version": "v1.2.0"
+    },
+    "react/promise-timer": {
+        "version": "v1.5.1"
+    },
+    "react/socket": {
+        "version": "v1.3.0"
+    },
+    "react/stream": {
+        "version": "v1.1.0"
+    },
+    "ringcentral/psr7": {
+        "version": "1.2.2"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -162,6 +210,9 @@
             "bin/console",
             "config/bootstrap.php"
         ]
+    },
+    "symfony/debug": {
+        "version": "v4.4.0"
     },
     "symfony/dependency-injection": {
         "version": "v5.0.0"
@@ -249,6 +300,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.13.0"
+    },
+    "symfony/process": {
+        "version": "v5.0.0"
     },
     "symfony/routing": {
         "version": "4.2",

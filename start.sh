@@ -1,0 +1,1 @@
+./vendor/bin/ppm start --bootstrap=symfony --app-env=prod --logging=0 --debug=0 --workers=20 --port=1337
